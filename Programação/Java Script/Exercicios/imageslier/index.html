@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:blue ;
+        }
+        div.slider{
+            width: 90vw;
+            height: 90vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            margin: auto;
+        }
+        .slide-content{
+            background-color:red;
+            width: 80vw;
+            height:80vh;
+            margin: auto;
+            display: none;
+        }
+        .slide-content.active{
+            display: block;
+        }
+        .slide1{
+            background-image: url(pexels-irina-berdzenishvili-10913351.jpg);
+            width: 80vw;
+            height:80vh;
+            background-position: center center;
+            background-size: cover;
+        }
+        .slide2{
+            background-image: url(pexels-mathilde-langevin-10897662.jpg);
+            width: 80vw;
+            height:80vh;
+            background-position: center center;
+            background-size: cover;
+        }
+        .slide3{
+            background-image: url(pexels-thiago-calamita-7422083.jpg);
+            width: 80vw;
+            height:80vh;
+            background-position: center center;
+            background-size: cover;
+        }
+        #prev,
+        #next{
+            top: 50%;
+            height:5rem;
+            width: 5rem;
+            line-height: 4.5rem;
+            font-size: 2rem;
+            border:3px solid aqua;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide-content active">
+            <div class="slide1"></div>
+        </div>
+        <div class="slide-content">
+            <div class="slide1"></div>
+        </div>
+        <div class="slide-content">
+            <div class="slide1"></div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

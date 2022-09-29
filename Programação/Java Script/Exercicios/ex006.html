@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM</title>
+    <style>
+        #area{
+            font: normal 15pt Arial;
+            background: greenyellow;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        #area:hover{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="botao()" onmouseenter="entrar()" onmouseleave="sair()">Insteraja...</div>
+    <script>
+        var area = document.getElementById('area')
+         function botao(){
+                area.innerHTML='clicou'
+         }
+         function entrar(){
+             area.style.background='red'
+         }
+         function sair(){
+             area.style.background='greenyellow'
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias com HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinãmica</h1>
+    <p>tente abrir esse site em vário dispositivos diferentes ou diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width:750px )" srcset="Menor.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="Media.png" type="image/png">
+        <img src="Maior.png" alt="imagem flexivel">
+
+        <h2>Reprooduziir um audio</h2>
+        <p>Vamos reproduzir um faixa MP# usando HTML5 </p>
+        <audio src="Victorino Silva Meu Tributo_128k.mp3" controls autolay loop></audio>
+    </picture>
+</body>
+</html>

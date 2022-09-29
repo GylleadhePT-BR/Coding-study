@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Pacifico&display=swap');
+
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: 'Mochiy Pop P One', sans-serif;;
+}

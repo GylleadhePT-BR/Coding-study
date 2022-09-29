@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&display=swap');
+body{
+    background: rgb(70, 142, 216);
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-weight: bolder;
+}
+header{
+    color:white;
+    text-align: center;
+    font-size: 2rem;
+}
+section{
+background:white;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);
+}
+div{
+    text-align: center;
+    padding: 5px;
+}
+div#foto img{
+    width: 280px;
+    height: 300px;
+    border-radius: 1000px;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

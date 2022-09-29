@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 150, 236, 0.61),
+    rgba(158, 0, 197, 0.486)
+  );
+  backdrop-filter: blur(10px);
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 20px;
+  font-weight: 500;
+  color: black;
+  transition: 0.5s ease;
+}
+a:hover {
+  color: aliceblue;
+  transform: scale(1.6);
+  transition: 0.5s ease;
+}
+.mobile {
+  visibility: hidden;
+  display:none
+}
+.menu {
+  visibility: hidden;
+  display: none;
+}
+@media screen and (max-width: 634px) {
+  .navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    height:10vh;
+  }
+  a {
+    visibility: hidden;
+  }
+  .menu {
+      display:flex;
+    visibility: visible;
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .active {
+      display: flex;
+      flex-direction: column;
+      height:70vh;
+      background-image: linear-gradient(
+        45deg,
+        rgba(0, 150, 236, 0.61),
+        rgba(158, 0, 197, 0.486)
+      );
+      backdrop-filter: blur(10px);
+  }
+}

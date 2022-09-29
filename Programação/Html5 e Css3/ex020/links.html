@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Links</title>
+    <style>
+        ul{
+            color: rgb(0, 0, 0);
+        }
+        a{
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        #l1:hover{
+            color: purple;
+        }
+        #l2:hover{
+            color: red;
+        }
+        #l3:hover{
+            color:rgb(5, 50, 228);
+        }
+        #l4:hover{
+            color: rgb(20, 109, 138);
+        }
+        #l5:hover{
+            color: rgb(172, 54, 158);
+        }
+        #l2::before{
+            content: '⇒';
+        }
+        #l2::after{
+            content: '⇐';
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a id="l1" href="#">Github</a></li>
+        <li><a id="l2" href="#">Youtube</a></li>
+        <li><a id="l3"href="#">Facebook</a></li>
+        <li><a id="l4"href="#">Twitter</a></li>
+        <li><a id="l5"href="#">Instagram</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        canvas{
+            position: absolute;
+            top: 0px;
+            bottom:0px;
+            left:0px;
+            right: 0px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <script >
+        //variaveis de jogo
+        var canvas , ctx , altura , largura, frames=0,maxpulos=4; 
+        
+            chao={
+                y : 550,
+                alt :50,
+                cor: "#ffdf70", 
+            
+            desenha: function(){
+                ctx.fillStyle=this.cor;
+                ctx.fillRect(0,this.y,largura,this.alt);
+                }
+            },
+
+            obstaculos={
+                _obs : [],
+                cores: ["blue,orange,ciane,grey"],
+
+                insere: function(){
+                    this._obs.push({
+                        x: 200 , 
+                        larg: 30 + Math.floor(20 * Math.random()),
+                        alt: 30 + Math.floor(120 * Math.random()),
+                        cor: this.cores[Math.floor(4 * Math.random())]
+                    });
+                },
+
+                atuualiza: function(){
+
+                },
+
+                desenha: function(){
+                    for (var i = 0 , tam = this._obs.length;i < tam ; i++){
+                        var obs = this._obs[i];
+                        ctx.fillStyle = obs.cor;
+                        ctx.fillRect(obs.x , chao.y - obs.altura , obs.larg , obs.alt);
+                    }
+                }
+            
+            };
+
+            bloco={
+                x : 50,
+                y :0,
+                alt:50,
+                larg:50,
+                cor:"red",
+                gravidade : 1.5,
+                velocidade : 0,
+                pulo: 15,
+                qntpulos:0,
+
+                atualiza: function(){
+                    this.velocidade += this.gravidade;
+                    this.y += this.velocidade;
+
+                    if(this.y > chao.y - this.alt){
+                        this.y = chao.y - this.alt
+                        this.qntpulos = 0;
+                    }
+                },
+
+                pula: function(){
+                    if(this.qntpulos < maxpulos){
+                        this.velocidade = -this.pulo
+                        this.qntpulos++;
+                    }
+                    
+                },
+
+                desenha: function(){
+                    ctx.fillStyle = this.cor;
+                    ctx.fillRect(this.x , this.y , this.larg , this.alt)
+                }
+
+            };
+
+        function clique(event) {
+            bloco.pula();
+        }
+        function main() {
+            altura = window.innerHeight;
+             largura = window.innerWidth;
+
+            if(largura >= 500){
+                largura = 600;
+                altura = 600;
+            }
+
+
+            canvas = document.createElement("canvas");
+            canvas.width = largura;
+            canvas.height = altura;
+            canvas.style.border = "1px solid black";
+
+
+            ctx = canvas.getContext("2d");
+            document.body.appendChild(canvas);
+            document.addEventListener("mousedown" , clique);
+
+            roda()
+        }
+        function roda(){
+            atualiza();
+            desenha();
+
+            window.requestAnimationFrame(roda);
+
+        }
+        function atualiza(){
+            frames++;
+            bloco.atualiza();
+        }
+        function desenha(){
+            ctx.fillStyle="Blue"
+            ctx.fillRect(0,0,largura , altura);
+            
+            chao.desenha();
+            obstaculos.desenha();
+            bloco.desenha();
+        }
+        //Iniciando game
+        main();
+    </script>
+</body>
+</html>

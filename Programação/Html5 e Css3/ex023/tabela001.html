@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cabeca{
+            border: 1px solid black;
+            height: 30px;
+            width: 200px;
+            font-size: 25px;
+            letter-spacing: 2px;
+            background-color: rgb(191, 255, 71);
+        }
+        #hora{
+            font-weight: bolder;
+        }
+        #dado2{
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <table>
+        <!--
+            HIERARQUIA DE TABELAS (SIMPLES)
+            TABLES = Tabela
+                TABLE ROW = linha de tabela <tr>
+                    TABLE HEADER = cabeçalho de tabela <th>
+                        TABLE DATA  = dados da tabela <td>
+        -->
+            <th colspan="3" class="cabeca">
+                Horario escolar
+            </th>
+            <tr><!--Primeira linha-->
+                <td id="hora">7:00 as 8:00</td>
+                <td>Português</td>
+                <td>Matematica</td>
+            </tr>
+            <tr><!--Segunda linha-->
+                <td id="hora">8:00 as 9:00</td>
+                <td>Português</td>
+                <td>Matematica</td>
+            </tr>
+            <tr><!--Terceira linha-->
+                <td id="hora">9:00 as 10:00</td>
+                <td>Matematica</td>
+                <td>Português</td>
+            </tr>
+            <tr><!--Quarta linha-->
+                <td id="hora">10:00 as 11:00</td>
+                <td>Matematica</td>
+                <td>Matematica</td>
+            </tr>
+    </table>
+</body>
+</html>

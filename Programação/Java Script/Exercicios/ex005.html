@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: magenta;
+    }
+    #titulo{
+        color: white;
+    }
+</style>
+<body>
+    <h1 id="titulo"> Iniciando estudos com Dom </h1>
+    <script>
+        var color = window.document.body
+        var tittulo = window.document.querySelector('#titulo')
+        var nome = prompt('Qual o seu nome :')
+        document.write(`Obriigado por começar a aprender  usar o DOM ${nome}`)
+        tittulo.style.color='white'
+        color.style.background='black'
+    </script>
+</body>
+</html>
