@@ -20,7 +20,7 @@ cor = cor2
 janela = Tk() # chamando toda a biblioteca e suas funções para uma variavel #
 janela.resizable(False , False) # informando que a janela irá er um tamanho fixo #
 janela.title("")# definindo um titulo vazio para a janela #
-janela.geometry("420x160")# Definindo resolução do programa#
+janela.geometry("400x160")# Definindo resolução do programa#
 janela.configure(bg=fundo)# configurando A cor de fundo com a funcao "bg"#
 
 ##### Criando função que ira armazenar todos os valores necessarios ####
@@ -40,7 +40,7 @@ def relogio():
     
 
 
-Hora = Label(janela , text="" , font=("digital-7 80") , bg=fundo , fg=cor)
+Hora = Label(janela , text="" , font=("digital-7 80") , bg=fundo , fg=cor6)
 Hora.grid(row=0 , column=0 , sticky=NW , padx=60)
 
 Data = Label(janela , text="" , font=("digital-7 20 ") , bg=fundo  , fg=cor)
