@@ -6,7 +6,7 @@ import pyglet #### Importando biblioteca para improtar fontes personalizadas ###
 
 ###### Criando Variáveis #######
 
-pyglet.font.add_file("digital-7.ttf")# importantdo arquivo da fonte#
+pyglet.font.add_file("digital-7.ttf")
 cor1 = "#3d3d3d"  # preta
 cor2 = "#fafcff"  # branca
 cor3 = "#21c25c"  # verde
