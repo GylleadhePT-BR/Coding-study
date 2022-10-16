@@ -40,10 +40,10 @@ def relogio():
     
 
 
-Hora = Label(janela , text="" , font=("arial 80") , bg=fundo , fg=cor6)
+Hora = Label(janela , text="" , font=("digital-7 80") , bg=fundo , fg=cor6)
 Hora.grid(row=0 , column=0 , sticky=NW , padx=60)
 
-Data = Label(janela , text="" , font=("arial 20 ") , bg=fundo  , fg=cor)
+Data = Label(janela , text="" , font=("digital-7 20 ") , bg=fundo  , fg=cor)
 Data.grid(row=1 , column=0 ,  sticky=NW , padx=80)
 
 
